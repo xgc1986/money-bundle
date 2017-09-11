@@ -1,0 +1,7 @@
+doctrine:
+  dbal:
+    mapping_types:
+      money: decimal
+
+    types:
+      money: Xgc\MoneyBundle\Doctrine\DBAL\Type\MoneyType

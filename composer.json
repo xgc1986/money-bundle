@@ -1,0 +1,68 @@
+{
+  "name": "xgc/money-bundle",
+  "license": "Creative Commons Attribution-NonCommercial 3.0 Unported",
+  "description": "A doctrine adaptation of nesbot/carbon",
+  "keywords": [
+    "money",
+    "symfony",
+    "doctrine",
+    "dbal",
+    "forms"
+  ],
+  "authors": [
+    {
+      "email": "xgc1986@gmail.com",
+      "name": "Javier González Cuadrado"
+    }
+  ],
+  "type": "library",
+  "minimum-stability": "stable",
+  "config": {
+    "bin-dir": "bin"
+  },
+  "autoload": {
+    "psr-4": {
+      "Xgc\\MoneyBundle\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    },
+    "files": []
+  },
+  "require": {
+    "php": ">=7.1",
+    "fzaninotto/faker": "^1.7",
+    "symfony/symfony": "^3.3",
+    "doctrine/doctrine-bundle": "^1.7",
+    "sensio/framework-extra-bundle": "^3.0",
+    "xgc/money": "^0.1.0"
+  },
+  "require-dev": {
+    "bruli/php-git-hooks": "^5.1",
+    "phpunit/phpunit": "^6.2",
+    "matthiasnoback/symfony-dependency-injection-test": "^2.1",
+    "mockery/mockery": "^0.9"
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "PhpGitHooks\\Infrastructure\\Composer\\ConfiguratorScript::buildConfig"
+    ],
+    "post-update-cmd": [
+      "PhpGitHooks\\Infrastructure\\Composer\\ConfiguratorScript::buildConfig"
+    ]
+  },
+  "archive": {
+    "exclude": [
+      "/vendor",
+      "/tests",
+      "/phpunit.xml.dist",
+      "/.travis.yml",
+      "/php-git-hooks.yml",
+      "/docs",
+      "/README.md",
+      "/.scrutinizer.yml"
+    ]
+  }
+}
